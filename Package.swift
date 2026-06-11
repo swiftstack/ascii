@@ -17,7 +17,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ASCII"),
+            name: "ASCII",
+            swiftSettings: [
+                .treatWarning("EmbeddedRestrictions", as: .error)
+            ]),
         .testTarget(
             name: "Tests",
             dependencies: [
